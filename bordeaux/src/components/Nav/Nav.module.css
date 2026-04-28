@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  font-size: 1.4rem;
+}
+
+.brandText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+
+.backButton {
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.backButton:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-secondary);
+}

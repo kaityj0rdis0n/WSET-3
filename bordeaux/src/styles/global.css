@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #0e0c0c;
+  --color-surface: #181414;
+  --color-surface-raised: #221c1c;
+  --color-border: #352828;
+  --color-wine: #7b2d3e;
+  --color-wine-light: #a84458;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-text-primary: #f0e6d3;
+  --color-text-secondary: #b8a48a;
+
+  /* Natural, high-contrast correct/incorrect */
+  --color-correct: #3d8f56;
+  --color-incorrect: #9e3a2f;
+
+  /* Consistent topic colour-coding — each maps to a natural reference */
+  --color-topic-geography: #5B9ED6;    /* map blue — rivers, terrain */
+  --color-topic-appellations: #7FAF52; /* sage green — countryside, regions */
+  --color-topic-grapes: #A673CC;       /* violet — grape */
+  --color-topic-soils: #C44A2A;        /* brick red — clay, earth */
+  --color-topic-classification: #C97820; /* amber — prestige, parchment */
+  --color-topic-styles: #C45E7A;       /* rose — wine */
+
+  /* Novelty accent for flashcard answer reveal */
+  --color-answer-accent: #2E8B8B;      /* dusty teal — distinct from all topics */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}

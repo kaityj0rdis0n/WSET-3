@@ -1,0 +1,112 @@
+.layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Home */
+.homeContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-gold-light);
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 4px;
+}
+
+.modeGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 24px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.modeCard:hover {
+  background: var(--color-surface-raised);
+  border-color: var(--color-wine);
+}
+
+.modeIcon {
+  font-size: 1.8rem;
+}
+
+.modeTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.modeDescription {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Topics */
+.topics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.topicsLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+}
+
+.topicTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.topicTag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}

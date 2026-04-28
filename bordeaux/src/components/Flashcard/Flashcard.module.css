@@ -1,0 +1,234 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.topicGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.topicChip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.topicChipSelected {
+  /* background stays dark — border and text color (set via inline style) carry the selection state */
+  background: var(--color-surface-raised);
+  border-width: 2px;
+}
+
+.cardCount {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.startButton {
+  padding: 14px 40px;
+  background: var(--color-wine);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.startButton:hover:not(:disabled) {
+  background: var(--color-wine-light);
+}
+
+.startButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Progress */
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--color-surface-raised);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  align-self: flex-end;
+}
+
+/* Card flip */
+.card {
+  width: 100%;
+  min-height: 240px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+
+.cardFlipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: var(--color-surface-raised);
+  border-color: var(--color-wine);
+}
+
+.cardTopicLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  /* colour set via inline style using TOPIC_COLOR_VAR */
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.cardHint {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: auto;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.actionButton {
+  flex: 1;
+  padding: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: opacity 0.2s;
+}
+
+.actionButton:hover {
+  opacity: 0.85;
+}
+
+.unknownButton {
+  background: var(--color-incorrect);
+  color: var(--color-text-primary);
+}
+
+.knownButton {
+  background: var(--color-correct);
+  color: var(--color-text-primary);
+}
+
+/* Results */
+.resultsCard {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.resultsStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultsPercent {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.resultsLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.resultsBreakdown {
+  display: flex;
+  gap: 20px;
+  font-size: 0.875rem;
+}
+
+.knownCount {
+  color: #6db88a;
+}
+
+.unknownCount {
+  color: #d97a7a;
+}
