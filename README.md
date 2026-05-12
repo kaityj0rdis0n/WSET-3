@@ -23,6 +23,24 @@ npm run dev
 
 ---
 
+## Releases
+
+### Map Mode (2026-05-11)
+
+**Explore + Drill-Down Quiz** — tap a region on the Bordeaux map to see quick facts, then quiz yourself on that specific area.
+
+- **Explore panel** shows 6 consistent fields per region: Bank, Key Grapes, Soils, Style, Classification, Notable Châteaux
+- **Per-region quiz** with a single-retry mechanic — wrong once shows "Try Again" and lets you pick again; wrong twice shows "Incorrect" with the explanation
+- **10 regions covered:** Pauillac, St-Estèphe, St-Julien, Margaux, Haut-Médoc, Pessac-Léognan, Sauternes, St-Émilion, Pomerol, Entre-Deux-Mers
+- **22 region-specific quiz questions** across all regions
+
+**Technical notes:**
+- Map is a hand-drawn SVG (schematic, not cartographic) — polygon paths positioned relative to each other with river bezier curves as landmarks. No mapping library or GeoJSON.
+- Region data lives in `src/data/regions.ts`, map geometry in `src/components/Map/BordeauxMap.tsx`
+- Added `src/vite-env.d.ts` (was missing — needed for `tsc` to resolve CSS module imports)
+
+---
+
 ## Next Steps
 
 ### Content

@@ -23,7 +23,7 @@ export interface QuizQuestion {
   explanation: string;
 }
 
-export type StudyMode = 'home' | 'flashcards' | 'quiz';
+export type StudyMode = 'home' | 'flashcards' | 'quiz' | 'map';
 
 export type FlashcardStatus = 'unseen' | 'known' | 'unknown';
 

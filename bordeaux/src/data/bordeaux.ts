@@ -143,6 +143,36 @@ export const flashcards: Flashcard[] = [
     back: 'No. Pomerol has never had an official classification, yet Château Pétrus commands among the highest prices in the world.',
   },
 
+  // --- Classification (additional) ---
+  {
+    id: 'class-5',
+    topic: 'classification',
+    front: 'What are "Super Seconds"?',
+    back: 'An informal term for top Deuxième Crus (Second Growths) whose quality and price rival the First Growths. Examples: Cos d\'Estournel, Ducru-Beaucaillou, Léoville Las Cases, Pichon-Longueville-Lalande.',
+  },
+  {
+    id: 'class-6',
+    topic: 'classification',
+    front: 'What is Premier Grand Cru Classé A in the St-Émilion classification?',
+    back: 'The highest tier of the St-Émilion classification. Currently includes Château Cheval Blanc, Château Ausone, Château Angélus, and Château Pavie. Unlike the 1855 Classification, this tier can change with each revision.',
+  },
+
+  // --- Grapes (additional) ---
+  {
+    id: 'grape-6',
+    topic: 'grapes',
+    front: 'What is Carmenère\'s connection to Bordeaux?',
+    back: 'Carmenère originated in Bordeaux as one of the original blending grapes. It was nearly wiped out by phylloxera in the 19th century and largely abandoned in France. It survived in Chile (misidentified as Merlot for decades) and is now Chile\'s signature red variety.',
+  },
+
+  // --- Appellations (additional) ---
+  {
+    id: 'app-6',
+    topic: 'appellations',
+    front: 'What are satellite appellations in Bordeaux? Name three.',
+    back: 'Smaller appellations on the fringes of Bordeaux that can append a famous name to their own. Examples: St-Georges St-Émilion, Castillon Côtes de Bordeaux, Fronsac. Generally offer similar grape varieties at lower prices than the prestige appellations.',
+  },
+
   // --- Viticulture & Production ---
   {
     id: 'geo-6',
@@ -339,5 +369,37 @@ export const quizQuestions: QuizQuestion[] = [
     options: ['A blending tank — 10,000 litres', 'A French oak barrel — 225 litres', 'A concrete egg — 500 litres', 'A large oak cask — 1,200 litres'],
     correctIndex: 1,
     explanation: 'A barrique is the standard Bordeaux barrel, holding 225 litres of French oak. Ageing in barriques adds tannin, structure, and flavours like cedar, vanilla, and spice.',
+  },
+  {
+    id: 'q-15',
+    topic: 'classification',
+    question: 'What is the informal term for top Deuxième Crus whose quality rivals the First Growths?',
+    options: ['Grand Seconds', 'Super Seconds', 'Elite Seconds', 'Second Firsts'],
+    correctIndex: 1,
+    explanation: 'Top Deuxième Crus like Cos d\'Estournel, Ducru-Beaucaillou, Léoville Las Cases, and Pichon-Longueville-Lalande are affectionately called "Super Seconds" — their quality and price often rival the official First Growths.',
+  },
+  {
+    id: 'q-16',
+    topic: 'classification',
+    question: 'What is the highest tier of the St-Émilion classification?',
+    options: ['Grand Cru Classé', 'Premier Cru Classé', 'Premier Grand Cru Classé A', 'Cru Supérieur'],
+    correctIndex: 2,
+    explanation: 'Premier Grand Cru Classé A is the top tier of the St-Émilion classification, currently held by Cheval Blanc, Ausone, Angélus, and Pavie. It is reviewed and can change with each reclassification.',
+  },
+  {
+    id: 'q-17',
+    topic: 'grapes',
+    question: 'Carmenère originated in Bordeaux but is now the signature red grape of which country?',
+    options: ['Argentina', 'Australia', 'Chile', 'South Africa'],
+    correctIndex: 2,
+    explanation: 'Carmenère was a Bordeaux blending grape nearly wiped out by phylloxera. It survived in Chile where it was long misidentified as Merlot, and is now Chile\'s signature variety.',
+  },
+  {
+    id: 'q-18',
+    topic: 'appellations',
+    question: 'Which of the following is NOT a real Bordeaux satellite appellation?',
+    options: ['Fronsac', 'Castillon Côtes de Bordeaux', 'Petit Pomerol', 'St-Georges St-Émilion'],
+    correctIndex: 2,
+    explanation: '"Petit Pomerol" does not exist. Fronsac, Castillon Côtes de Bordeaux, and St-Georges St-Émilion are real satellite appellations on the fringes of Bordeaux.',
   },
 ];

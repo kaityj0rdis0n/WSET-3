@@ -3,6 +3,7 @@ import type { StudyMode } from './types';
 import { Nav } from './components/Nav/Nav';
 import { FlashcardMode } from './components/Flashcard/Flashcard';
 import { QuizMode } from './components/Quiz/Quiz';
+import { MapMode } from './components/Map/Map';
 import styles from './App.module.css';
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
         {mode === 'home' && <HomeScreen onNavigate={setMode} />}
         {mode === 'flashcards' && <FlashcardMode />}
         {mode === 'quiz' && <QuizMode />}
+        {mode === 'map' && <MapMode />}
       </main>
     </div>
   );
@@ -47,6 +49,14 @@ function HomeScreen({ onNavigate }: HomeScreenProps) {
           <h2 className={styles.modeTitle}>Quiz</h2>
           <p className={styles.modeDescription}>
             Test yourself with multiple-choice questions and get instant feedback and explanations.
+          </p>
+        </button>
+
+        <button className={styles.modeCard} onClick={() => onNavigate('map')}>
+          <span className={styles.modeIcon}>🗺️</span>
+          <h2 className={styles.modeTitle}>Map</h2>
+          <p className={styles.modeDescription}>
+            Explore Bordeaux's regions — tap to see key facts, then quiz yourself on each area.
           </p>
         </button>
       </div>

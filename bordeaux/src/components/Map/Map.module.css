@@ -1,0 +1,274 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: -12px;
+}
+
+/* Map */
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* Fact Panel */
+.factPanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow);
+}
+
+.factTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.factList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.factRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.factLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.factValue {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+/* Buttons */
+.primaryButton {
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-wine);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primaryButton:hover {
+  background: var(--color-wine-light);
+}
+
+.secondaryButton {
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+.backLink {
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  text-align: left;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--color-text-primary);
+}
+
+/* Quiz within map */
+.quizProgress {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.questionCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+}
+
+.questionText {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.optionButton:hover:not(:disabled) {
+  border-color: var(--color-wine);
+  background: var(--color-surface-raised);
+}
+
+.optionLetter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  min-width: 20px;
+}
+
+.optionText {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+/* Option states */
+.option_default {}
+
+.option_correct {
+  border-color: var(--color-correct);
+  background: rgba(61, 143, 86, 0.12);
+}
+
+.option_correct .optionLetter {
+  color: var(--color-correct);
+}
+
+.option_incorrect {
+  border-color: var(--color-incorrect);
+  background: rgba(158, 58, 47, 0.12);
+}
+
+.option_incorrect .optionLetter {
+  color: var(--color-incorrect);
+}
+
+/* Explanation */
+.explanationBox {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.verdictCorrect {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-correct);
+}
+
+.verdictIncorrect {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-incorrect);
+}
+
+.explanationText {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.nextButton {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-wine);
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.nextButton:hover {
+  background: var(--color-wine-light);
+}
+
+/* Results */
+.resultsCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.resultsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.resultsStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.resultsPercent {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.resultsLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
