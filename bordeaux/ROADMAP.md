@@ -8,12 +8,12 @@ Status legend: `[ ]` not started · `[x]` done
 
 Make the map teach geography on its own, and make it operable. Everything later builds on this.
 
-- [ ] **Color regions by bank** (Left / Right / Sweet / Entre-Deux-Mers). The Left-vs-Right Bank split is the most-tested concept in WSET 3 Bordeaux, and the map doesn't encode it today. _(XS)_
-- [ ] **Redraw geometry so the Gironde, Garonne, and Dordogne actually separate the banks.** Right now the rivers are decorative curves that enclose nothing — the most important landmark does no teaching work. _(M — hand-drawn SVG, the one real unknown)_
+- [x] **Color regions by bank** (Left / Right / Sweet / Entre-Deux-Mers) — done: regions filled by bank with a legend; selection shows as a gold outline so the bank colour stays visible. _(XS)_
+- [ ] **Redraw geometry so the Gironde, Garonne, and Dordogne actually separate the banks.** Right now the rivers are decorative curves that enclose nothing — the most important landmark does no teaching work. _(M — hand-drawn SVG, the one real unknown)_ — see **Future Considerations** below for the real-GeoJSON alternative.
 - [ ] **Fix label placement** — replace the average-all-points centroid in `getRegionCenter` with a bounding-box center or hand-tuned coordinates. Labels currently drift off irregular shapes (Haut-Médoc, Entre-Deux-Mers). _(S)_
 - [ ] **Add hover and keyboard focus states**; make regions focusable and operable (`role`, `tabindex`, Enter/Space, `aria-label`). No desktop preview today, and regions aren't keyboard-reachable. _(S–M)_
 
-Files: `src/components/Map/BordeauxMap.tsx`, `src/components/Map/Map.module.css`, `src/utils/topicColors.ts`.
+Files: `src/components/Map/BordeauxMap.tsx`, `src/components/Map/Map.module.css`, `src/utils/bankColors.ts`.
 
 ## Phase 1 — Identification mode (flagship)
 
@@ -40,5 +40,19 @@ Files: new `src/components/Map/Identify.tsx` + CSS, a small clue generator util,
 
 ## Suggested starting point
 
-- **Afternoon win:** Phase 0's color-by-bank + label fix + hover/focus. Visible improvement, no risky SVG surgery.
+- **Afternoon win:** Phase 0's label fix + hover/focus (color-by-bank ✓ done). Visible improvement, no risky SVG surgery.
 - **Real upgrade:** full Phase 0 + Phase 1 — the geometry redraw plus identification mode is what turns the map from a clickable fact sheet into a study tool.
+
+## Future Considerations
+
+### Geographical Map Upgrade
+
+_The Phase 0 geometry redraw is the near-term, hand-drawn fix; this is the larger, accurate-geometry path for later._
+
+The current map is a hand-drawn SVG schematic. To upgrade to real geography:
+
+1. **Get GeoJSON boundary data** — French AOC/AOP delimitation files from INAO via data.gouv.fr, or extract from OpenStreetMap via Overpass API
+2. **Simplify and convert** — upload GeoJSON to mapshaper.org, simplify to reduce point count, export as SVG
+3. **Swap paths** — replace the current hand-drawn `d="..."` coordinates in `BordeauxMap.tsx` with the real projected paths, adjust the viewBox to fit
+
+This approach keeps the same lightweight component structure (no new libraries) — just accurate geometry instead of approximated shapes. If pan/zoom or a tile basemap is later needed, React-Leaflet or D3 geo projection would be the next step up.
