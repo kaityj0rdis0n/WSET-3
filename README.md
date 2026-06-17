@@ -49,7 +49,7 @@ npm run dev
 
 ### Future Features
 - [ ] **Free-text answer mode** — instead of multiple choice, you type your answer. The app checks it loosely (keywords, not exact match), scores it, then regardless of whether you got it right, surfaces 2–3 follow-up prompts to dig deeper into the concept. Good for exam prep where you need to construct written responses, not just recognise the right answer.
-- [x] **Map mode** — ~~interactive map of Bordeaux where you identify appellations, banks, and rivers by location~~ Done — explore + drill-down quiz with retry mechanic. Future: pin-drop identification mode, more quiz questions, refine SVG geometry
+- [x] **Map mode** — ~~interactive map of Bordeaux where you identify appellations, banks, and rivers by location~~ Done — explore + drill-down quiz with retry mechanic. Planned improvements tracked in [bordeaux/ROADMAP.md](./bordeaux/ROADMAP.md)
 - [ ] **Game mode** — time-pressured or competitive format (e.g. match the château to its appellation, fastest finger style)
 - [ ] **Spaced repetition** — resurface cards you marked "still learning" more frequently
 - [ ] **Progress persistence** — save session results to localStorage so known/unknown state carries across sessions
