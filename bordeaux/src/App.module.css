@@ -5,8 +5,14 @@
 }
 
 .main {
+  /* No inner scroll container here: the page scrolls naturally and the sticky nav
+     (Nav.module.css) pins to the top of the viewport. An overflow-y:auto here traps
+     scrolling and clips tall content like the map's fact panel.
+     Flex column so a mode's container can vertically centre itself (via margin:auto)
+     when its content is shorter than the viewport, instead of leaving a void below. */
   flex: 1;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Home */

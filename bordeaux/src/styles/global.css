@@ -31,6 +31,12 @@
   /* Novelty accent for flashcard answer reveal */
   --color-answer-accent: #2E8B8B;      /* dusty teal — distinct from all topics */
 
+  /* Map bank / style grouping — one distinct hue per Bordeaux bank, tied to its wine */
+  --color-bank-left: #8a3a48;            /* claret — Left Bank, Cabernet Sauvignon-led reds */
+  --color-bank-right: #8e5a7e;           /* plum — Right Bank, Merlot-led reds */
+  --color-bank-sweet: #be8b3a;           /* honeyed amber — Sauternes botrytis sweet whites */
+  --color-bank-entre-deux-mers: #5f8a64; /* sage — Entre-Deux-Mers crisp dry whites */
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;

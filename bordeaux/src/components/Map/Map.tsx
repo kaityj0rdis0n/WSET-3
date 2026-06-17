@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { regions, regionQuizQuestions } from '../../data/regions';
 import type { RegionFact, RegionQuizQuestion } from '../../data/regions';
 import { BordeauxMap } from './BordeauxMap';
+import { BANK_COLOR_VAR, BANK_LABEL, BANKS } from '../../utils/bankColors';
 import styles from './Map.module.css';
 
 type MapPhase = 'explore' | 'quiz' | 'quizAnswer' | 'quizRetry' | 'quizIncorrect' | 'quizResults';
@@ -178,6 +179,18 @@ export function MapMode() {
           onRegionClick={handleRegionClick}
         />
       </div>
+
+      <ul className={styles.legend}>
+        {BANKS.map((bank) => (
+          <li key={bank} className={styles.legendItem}>
+            <span
+              className={styles.legendSwatch}
+              style={{ background: BANK_COLOR_VAR[bank] }}
+            />
+            {BANK_LABEL[bank]}
+          </li>
+        ))}
+      </ul>
 
       {selectedRegion && (
         <div className={styles.factPanel}>

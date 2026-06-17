@@ -6,6 +6,13 @@ export type Topic =
   | 'classification'
   | 'styles';
 
+/**
+ * Bordeaux bank / style grouping used to colour-code the map.
+ * Sauternes is grouped as 'sweet' rather than 'left': it sits on the Left Bank
+ * geographically, but its sweet-white style is distinct enough to warrant its own colour.
+ */
+export type Bank = 'left' | 'right' | 'sweet' | 'entre-deux-mers';
+
 export interface Flashcard {
   id: string;
   topic: Topic;
